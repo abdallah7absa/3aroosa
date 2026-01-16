@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="../assets/images/icon.png">
+	<title>3aroosa</title>
+	<style>
+		
+		@font-face {
+		    font-family: aroosa;
+		    src: url(../assets/fonts/3aroosa_font.ttf);
+		}
+
+		body {
+		    background-color: #F2E40A;
+		}
+
+		.header {
+		    width: 100%;
+		    background-color: #DD0A17;
+		    height: 55px;
+		    align-content: center;
+		    text-align: center;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+		}
+
+		.header__ul {
+		    height: 100%;
+		    margin: auto;
+		}
+
+		.header__li-3 {
+		    display: inline-block;
+		    float: right;
+		    align-content: center;
+		    height: 100%;
+		}
+
+		.header__li-2 {
+		    display: inline-block;
+		    float: right;
+		    align-content: center;
+		    height: 100%;
+		}
+
+		.header__li-1 {
+		    display: inline-block;
+		    float: right;
+		    align-content: center;
+		    height: 100%;
+		}
+
+		.header__link-1 {
+		    margin-left: 20px;
+		    padding: 10px;
+		}
+
+		.username__span {
+		    margin-left: 20px;
+		    text-decoration: none;
+		    color: black;
+		    font-weight: 600;
+		    font-size: 1.5rem;
+		}
+
+		.header__link-3 {
+		    margin-left: 20px;
+		    margin-right: 10px;
+		    margin-top: 10px;
+		}
+
+		.header__logo {
+		    width: 55px;
+		    float: left;
+		    display: inline-block;
+		}
+
+		.header__logout {
+		    height: 30px;
+		    display: inline-block;
+		}
+
+		.header__cart {
+		    height: 45px;
+		    display: inline-block;
+		    filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.5));
+		}
+
+		#title {
+		    display: inline-block;
+		    font-family: aroosa;
+		    font-size: 2rem;
+		    color: black;
+		    vertical-align: top;
+		    font-weight: 200;
+		}
+
+		.clearfix {
+		    clear: both;
+		}
+
+		.header__left {
+		    display: inline-block;
+		    color: black;
+		    vertical-align: top;
+		    font-weight: 200;
+		    float: left;
+		}
+
+		/*=========================================*/
+
+
+		.footer {
+		    width: 100%;
+		    background-color: #DD0A17;
+		    height: 55px;
+		    align-content: center;
+		    text-align: center;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+		}
+
+		.footer__ul {
+		    height: 100%;
+		    margin: auto;
+		}
+
+		.footer__li-3 {
+		    display: inline-block;
+		    float: right;
+		    align-content: center;
+		    height: 100%;
+		}
+
+		.footer__li-2 {
+		    display: inline-block;
+		    float: right;
+		    align-content: center;
+		    height: 100%;
+		}
+
+		.footer__li-1 {
+		    display: inline-block;
+		    float: right;
+		    align-content: center;
+		    height: 100%;
+		}
+
+		.footer__link-1 {
+		    margin-left: 20px;
+		    padding: 10px;
+		}
+
+		.footer__link-3 {
+		    margin-left: 20px;
+		    margin-right: 10px;
+		    margin-top: 10px;
+		}
+
+		.footer__logo {
+		    width: 55px;
+		    float: left;
+		    display: inline-block;
+		}
+
+		.footer__logout {
+		    height: 30px;
+		    display: inline-block;
+		}
+
+		.footer__cart {
+		    height: 45px;
+		    display: inline-block;
+		    filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.5));
+		}
+
+		.footer__left {
+		    display: inline-block;
+		    color: black;
+		    vertical-align: top;
+		    font-weight: 200;
+		    float: left;
+		}
+
+		/*=========================================*/
+
+		#slider {
+		    width: 100%;
+		    margin: auto;
+		    text-align: center;
+		    align-content: center;
+		    background-color: #DD0A17;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+		    display: flex;
+		}
+
+		#image {
+			margin: 10px;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+		}
+
+		.button {
+			margin: auto;
+			width: 80px;
+			height: 80px;
+			font-size: 80px;
+			background-color: transparent;
+			font-weight: 800;
+			border: 0px solid black;
+		}
+
+		#filters {
+		    width: 100%;
+		    margin: auto;
+		    text-align: center;
+		    align-content: center;
+		    background-color: #DD0A17;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+		}
+
+		::-webkit-input-placeholder {
+			margin: 20px;
+			width: 80%;
+			height: 60px;
+			font-size: 1.5rem;
+			background-color: #F2E40A;
+			color: black;
+			font-family: aroosa;
+		}
+		#searchInput {
+			margin: 10px;
+			width: 500px;
+			height: 40%;
+			font-size: 1.5rem;
+			background-color: #F2E40A;
+			color: black;
+			border-style: none;
+			border: 3px solid black;
+			font-weight: 700;
+			outline: none;
+		}
+
+		label {
+			margin: 10px;
+			width: 20%;
+			height: 40px;
+			font-size: 1.4rem;
+			color: black;
+			border-style: none;
+			font-weight: 700;
+			outline: none;
+		}
+		#categories {
+			margin: 10px;
+			width: 20%;
+			height: 40px;
+			font-size: 1.0rem;
+			background-color: #F2E40A;
+			color: black;
+			border-style: none;
+			border: 3px solid black;
+			font-weight: 700;
+			outline: none;
+		}
+
+		input[type="range"] {
+		  margin: 10px;
+		  -webkit-appearance: none;
+		  width: 10%;
+		  height: 10px;
+		  border: 3px solid black;
+		  background: #F2E40A;
+		  border-radius: 0px;
+		}
+
+		input[type="range"]::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  height: 20px;
+		  width: 20px;
+		  border-radius: 0%;
+		  background: #000000;
+		}
+
+		#main__product {
+		    width: 100%;
+		    margin: auto;
+		    height: 100%;
+		    text-align: center;
+		    align-content: center;
+		}
+
+		#product {
+			width: 300px;
+		    background-color: #DD0A17;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+			margin: 30px;
+			display: inline-block;
+		    text-align: center;
+		    align-content: center;
+		    justify-content: center;
+		}
+
+		#product__details {
+			width: 100%;
+			height: 100%;
+			color: black;
+			border-style: none;
+			outline: none;
+		}
+
+		#product__name {
+			width: 60%;
+			font-size: 1rem;
+			color: black;
+			font-weight: 700;
+			text-align: left;
+			align-content: left;
+			display: inline-block;
+			margin-left: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		#product__price {
+			width: 20%;
+			font-size: 1rem;
+			color: black;
+			font-weight: 700;
+			text-align: right;
+			align-content: right;
+			display: inline-block;
+			margin-right: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		#addButton {
+			width: 45%;
+			font-size: 1.5rem;
+			background-color: #F2E40A;
+			color: black;
+			border-style: none;
+			border: 3px solid black;
+			font-weight: 700;
+			margin-bottom: 10px;
+			outline: none;
+		}
+		#viewButton {
+			width: 45%;
+			font-size: 1.5rem;
+			background-color: #F2E40A;
+			color: black;
+			border-style: none;
+			border: 3px solid black;
+			font-weight: 700;
+			margin-bottom: 10px;
+			outline: none;
+		}
+
+		.header__li-1 {
+			position: relative;
+		}
+
+		#cartNum {
+			background-color: #F2E40A;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			text-decoration: none;
+			position: absolute;
+			line-height: 25px;
+			font-weight: 600;
+			color: black;
+			font-size: 18px;
+			bottom: 10px;
+			right: 10px;
+			display: none;
+			border: 2px solid black;
+		}
+
+		#fab {
+			background-color: #DD0A17;
+			width: 40px;
+			height: 40px;
+			border-radius: 0%;
+			text-decoration: none;
+			line-height: 30px;
+			font-weight: 600;
+			color: black;
+			align-content: center;
+			text-align: center;
+			font-size: 25px;
+			bottom: 20px;
+			right: 20px;
+			position: fixed;
+			display: none;
+			cursor: pointer;
+		    filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+		}
+
+	</style>
+</head>
+<body>
+
+    <div id="fab" onclick=resetScroll()>↑</div>
+
+    <div class="header">
+    	<div class="header__left">
+	        <img src="../assets/images/logo.png" alt="logo" class="header__logo">
+	        <span id="title">ماركت الصفوة</span>
+		</div>
+        <ul class="header__ul">
+			<li class="header__li-3"><a href="index.html" class="header__link-3"><img src="../assets/images/logout.png" alt="logout" class="header__logout"></a></li>
+            <li class="header__li-2"><span class="username__span" id="username">username</span></li>
+            <li class="header__li-1"><a href="cart.html" class="header__link-1" target="_blank"><img src="../assets/images/cart.png" alt="cart" class="header__cart"><div id="cartNum">0</div></a></li>
+        </ul>
+    </div>
+
+    <div class="clearfix"></div>
+
+	<h1 id="uniqe_id">Welcome</h1>
+
+    <div id="slider">
+    	<button class="button" onclick=nextBtn()>&lt</button>
+    	<div id="featureDiv">
+			<img id="image" src="../assets/images/logo.png" alt="" width="400px" height="500px">
+    	</div>
+    	<button class="button" onclick=preBtn()>&gt</button>
+	</div>
+
+	<h1>Welcome to El-Safwa Market <3</h1>
+
+    <div id="filters">
+
+    	<input type="text" name="product" id="searchInput" placeholder="Search">
+
+    	<label for="categories">Categories</label>
+		<select id="categories">
+		  <option value="all">All</option>
+		  <option value="hot">Hot Drinks</option>
+		  <option value="cold">Cold Drinks</option>
+		  <option value="toy">Toys</option>
+		</select>
+
+    	<label for="price">Price</label>
+	  	<input type="range" min="3" max="360" value="360" class="price" id="price">
+
+	</div>
+
+	<div id="main__product">
+<!-- 		<div id="product">
+			<div id="product__image">
+				<img src="../assets/images/products/1.png" width="300" height="375">
+			</div>
+			<div id="product__details">
+				<span id="product__name">El Arosa</span>
+				<span id="product__price">300$</span>
+				<br>
+				<button id="addButton">+</button>
+				<button id="viewButton">#</button>
+			</div>
+		</div> -->
+	</div>
+
+	<h1>Thank You for Visiting Us <3</h1>
+
+    <div class="footer">
+    	<div class="footer__left">
+	        <img src="../assets/images/logo.png" alt="logo" class="footer__logo">
+	       	<span id="title">&copy; عبدالله حبسه - كل الحقوق محفوظة</span>
+		</div>
+        <ul class="footer__ul">
+			<li class="footer__li-3"><a href="index.html" class="footer__link-3"><img src="../assets/images/logout.png" alt="logout" class="footer__logout"></a></li>
+        </ul>
+    </div>
+    <script>
+
+    	cartProducts = []
+    	showProduct = {}
+
+		username.innerHTML =  localStorage.username || "guest";
+
+		uniqe_id.innerHTML = "Featured"
+
+	    let products = []
+
+		fetch('../api/products.json')
+		    .then(response => response.json())
+		    .then(data => {
+		    	// console.log(data);
+		    	var featuredP = []
+		    	data.forEach((product) => {
+		    		if (product.featured == true) featuredP.push(product)
+		    	})
+		    	// console.log(featuredP)
+
+		        var id;
+		        var i = 0;
+		        var num_of_images = featuredP.length
+			    id = setInterval(function () {
+			    	// console.log(featureDiv.innerHTML)
+			        // image['src'] = featuredP[i % num_of_images].image;
+			        // console.log(i % num_of_images)
+			        featureDiv.innerHTML = `<img id="image" src="${featuredP[i % num_of_images].image}" alt="" width="400px" height="500px" onclick=ShowProduct(${featuredP[i % num_of_images].id})>`
+			        i++;
+			        if(localStorage.cart == "") {
+					    cartNum.innerHTML = 0
+					    cartNum.style.display = 'none';
+			        }
+			    }, 3000)
+
+		        function nextBtn() {
+			        featureDiv.innerHTML = `<img id="image" src="${featuredP[++i % num_of_images].image}" alt="" width="400px" height="500px" onclick=ShowProduct(${featuredP[i]})>`
+		        }
+		        function preBtn() {
+			        featureDiv.innerHTML = `<img id="image" src="${featuredP[--i % num_of_images].image}" alt="" width="400px" height="500px" onclick=ShowProduct(${featuredP[i]})>`
+		        }
+		    })
+		    .catch(error => console.error('Error fetching JSON:', error));
+
+	    function ShowProduct(p) {	    	
+	    	fetch('../api/products.json')
+		    	.then(response => response.json())
+			    .then(data => {
+			    	data.forEach((product) => {
+			    		if (product.id == p) {
+			    			console.log(product)
+							localStorage.showProduct = JSON.stringify(product)
+							window.open("product.html", "_blank")
+			    		}
+			    	})
+			    })
+			    .catch(error => console.error('Error fetching JSON:', error));
+	    }
+	    function AddProduct(p) {
+	    	fetch('../api/products.json')
+		    	.then(response => response.json())
+			    .then(data => {
+			    	data.forEach((product) => {
+			    		if (product.id == p) {
+			    			cartProducts.push(product)
+			    		}
+			    	})
+			    })
+			    .catch(error => console.error('Error fetching JSON:', error));
+		    console.log(cartProducts)
+		    localStorage.cart = JSON.stringify(cartProducts)
+		    cartNum.innerHTML = Number(cartNum.innerHTML) + 1
+		    cartNum.style.display = 'inline-block';
+	    }
+
+	    function updateProducts() {
+	    	main__product.innerHTML = ""
+	    	// console.log(categories.value)
+	    	// console.log(searchInput.value)
+	    	// console.log(price.value)
+		    fetch('../api/products.json')
+			    .then(response => response.json())
+			    .then(data => {
+
+			    	var newProducts = []
+
+			    	data.forEach((product) => {
+			    		if(!searchInput.value) {
+				    		if(categories.value == 'all') {
+				    			if(product.price <= price.value) newProducts.push(product);
+				    		}
+				    		else if(product.category == categories.value) {
+				    			if(product.price <= price.value) newProducts.push(product);
+				    		}
+				    	}
+				    	else if(searchInput.value == product.title) {
+				    		newProducts.push(product);
+				    	}
+			    	})
+
+			    	// console.log("newProducts")
+			    	// console.log(newProducts)
+
+			    	newProducts.forEach((product) => {
+			    		main__product.innerHTML += `
+			    			<div id="product">
+								<div id="product__image">
+									<img src="${product.image}" width="300" height="375">
+								</div>
+								<div id="product__details">
+									<span id="product__name">${product.title}</span>
+									<span id="product__price">${product.price}$</span>
+									<br>
+									<button id="addButton" onclick=AddProduct(${product.id})>+</button>
+									<button id="viewButton" onclick=ShowProduct(${product.id})>#</button>
+								</div>
+							</div>
+			    		`
+			    	})
+			    })
+			    .catch(error => console.error('Error fetching JSON:', error));
+	    }
+
+    	categories.addEventListener('change', () => {
+    		updateProducts();
+    	})
+    	searchInput.addEventListener('input', () => {
+    		updateProducts();
+    	})
+    	price.addEventListener('change', () => {
+    		updateProducts();
+    	})
+
+
+		window.onscroll = function() {scrollHandler()};
+
+		function scrollHandler() {
+			console.log(scrollY)
+			if(scrollY > 1000 && scrollY < 6275) {
+				fab.style.display = 'block';
+			}
+			else fab.style.display = 'none';
+		}
+
+		function resetScroll() {
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: "smooth",
+			});
+		}
+
+	    updateProducts();
+    </script>
+
+</body>
+</html>

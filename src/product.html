@@ -1,0 +1,112 @@
+
+<html>
+	<head>
+		<title>3aroosa</title>
+		<link rel="icon" href="../assets/images/icon.png">
+		<style>
+			body {
+				background-color: #F2E40A;
+			    text-align: center;
+			}
+			#main {
+				margin: 100px;
+			    width: 100%;
+			    margin: auto;
+			    display: flex;
+			}
+			#imgDiv {
+				width: 45%;
+				display: inline-block;
+			}
+			#mainImg {
+				width: 100%;
+			}
+			#detailsDiv {
+				width: 55%;
+				display: inline-block;
+				background-color: #F2E40A;
+			}
+			#productTitle {
+				width: 60%;
+				font-size: 3rem;
+				color: black;
+				font-weight: 700;
+				text-align: left;
+				align-content: left;
+				display: inline-block;
+				margin-left: 10px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+			}
+			#productPrice {
+				width: 20%;
+				font-size: 2rem;
+				color: black;
+				font-weight: 700;
+				text-align: right;
+				align-content: right;
+				display: inline-block;
+				margin-right: 10px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+			}
+			#productCategory {
+				width: 80%;
+				font-size: 1rem;
+				color: black;
+				font-weight: 900;
+				text-align: left;
+				align-content: left;
+				display: inline-block;
+				margin-left: 10px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			#productDescription {
+				width: 80%;
+				font-size: 1.5rem;
+				color: black;
+				font-weight: 400;
+				text-align: left;
+				align-content: left;
+				display: inline-block;
+				margin-left: 10px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="imgDiv">
+				<img src="../assets/images/products/1.png" id="mainImg">
+			</div>
+			<div id="detailsDiv">
+				<h1 id="productTitle">
+					Title
+				</h1>
+				<h2 id="productPrice">
+					Price
+				</h2>
+				<p id="productCategory">
+					Category
+				</p>
+				<p id="productDescription">
+					Descritption
+				</p>
+			</div>
+		</div>
+
+		<script>
+			product = JSON.parse(localStorage.showProduct)
+			console.log(JSON.parse(localStorage.showProduct))
+
+			mainImg['src'] = product.image
+			productTitle.innerHTML = product.title
+			productPrice.innerHTML = product.price + "$"
+			productCategory.innerHTML = product.category
+			productDescription.innerHTML = product.description
+		</script>
+
+	</body>
+</html>

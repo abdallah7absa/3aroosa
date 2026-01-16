@@ -1,0 +1,181 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="../assets/images/icon.png">
+	<title>3aroosa</title>
+</head>
+<style>
+	@font-face {
+		font-family: aroosa;
+		src: url(../assets/fonts/3aroosa_font.ttf);
+	}
+
+	body {
+		background-color: #F2E40A;
+		align-content: center;
+		text-align: center;
+	}
+
+	#main {
+		background-color: #DD0A17;
+		text-align: center;
+		align-content: center;
+		width: 50vh;
+		margin: auto;
+		border-radius: 0px;
+		filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+	}
+
+	#title {
+		color: black;
+		font-size: 5rem;
+		font-family: aroosa;
+		font-weight: 200;
+	}
+
+	p {
+		background-color: #F2E40A;
+		font-family: aroosa;
+		font-size: 2rem;
+		color: black;
+		width: 60%;
+		margin: auto;
+		margin-top: 100px;
+		margin-bottom: 0px;
+		font-weight: 200;
+		border-radius: 40px;
+		height: 60px;
+	}
+
+	::-webkit-input-placeholder {
+		margin: 20px;
+		width: 80%;
+		height: 60px;
+		font-size: 1.5rem;
+		background-color: #F2E40A;
+		color: black;
+		font-family: aroosa;
+	}
+	input {
+		margin: 20px;
+		width: 80%;
+		height: 60px;
+		font-size: 1.5rem;
+		background-color: #F2E40A;
+		color: black;
+		border-style: none;
+		border: 3px solid black;
+		font-weight: 500;
+		outline: none;
+	}
+
+	a {
+		color: black;
+		font-size: 2rem;
+		font-family: aroosa;
+		font-weight: 200;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+		font-size: 2rem;
+		font-family: aroosa;
+		font-weight: 200;
+		text-decoration: underline;
+	}
+
+	input[type=password] {
+		font-family: 'aroosa';
+	}
+
+	#signup {
+		margin: 20px;
+		width: 80%;
+		height: 60px;
+		font-size: 1.5rem;
+		background-color: #F2E40A;
+		color: black;
+		border-style: none;
+		border: 3px solid black;
+		font-weight: 500;
+		font-family: aroosa;
+	}
+
+	#signup:hover {
+		background-color: #FDEE0D;
+	}
+	#signup:active {
+		background-color: #F2E40A;
+	}
+</style>
+<body>
+
+	<div id="main">
+		<p>أجود أنواع الويبسايتس</p>
+		<h1 id="title">ماركت الصفوة</h1>
+
+		<input type="text" id="username" placeholder="اليوزرنيم">
+		<br>
+		<input type="password" id="password" placeholder="الباسورد">
+		<br>
+		<input type="password" id="repassword" placeholder="الباسورد تاني">
+		<br>
+		<button id="signup">سجل</button>
+		<br>
+		<a href="index.html">عندك أكاونت؟</a>
+
+	</div>
+
+<script>
+	
+	var signupButton = document.getElementById("signup").addEventListener("click", function() {
+		
+		var username = document.getElementById("username");
+		var password = document.getElementById("password");
+		var repassword = document.getElementById("repassword");
+
+		if (username.value && password.value && repassword.value) {
+			if(!/^\w+$/.test(username.value)) {
+				alert("Please Enter valid username: only numbers & letters & underscore are allowed");
+				return undefined;
+			}
+			if(password.value != repassword.value) {
+				password.value = "";
+				repassword.value = "";
+				alert("Passwords not matching!");
+				return undefined;
+			}
+			if(username.value.length < 8) {
+				alert("Username length must be > 8 characters");
+				return undefined;
+			}
+			if(password.value.length < 8) {
+				password.value = "";
+				repassword.value = "";
+				alert("Username length must be > 8 characters");
+				return undefined;
+			}
+			var date = new Date();
+			// cookieHelpers.setCookie('username', username.value, date);
+			// cookieHelpers.setCookie('password', password.value, date);
+			localStorage.setItem("username", username.value);
+			localStorage.setItem("password", password.value);
+
+			alert(`Hi ${username.value}, Account Created Successfully!`);
+			username.value = ""
+			password.value = ""
+			repassword.value = ""
+			window.open("index.html", "_self")
+		} else {
+			alert("Please Enter All Fields");
+			return undefined;
+		}	
+	});
+
+</script>
+
+</body>
+</html>
+

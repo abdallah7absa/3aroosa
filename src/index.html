@@ -1,0 +1,146 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3aroosa</title>
+	<link rel="icon" href="../assets/images/icon.png">
+</head>
+<style>
+	
+	@font-face {
+		font-family: aroosa;
+		src: url(../assets/fonts/3aroosa_font.ttf);
+	}
+
+	body {
+		background-color: #F2E40A;
+		align-content: center;
+		text-align: center;
+	}
+
+	#main {
+		background-color: #DD0A17;
+		text-align: center;
+		align-content: center;
+		width: 50vh;
+		margin: auto;
+		border-radius: 0px;
+		filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+	}
+
+	#title {
+		color: black;
+		font-size: 5rem;
+		font-family: aroosa;
+		font-weight: 200;
+	}
+
+	p {
+		background-color: #F2E40A;
+		font-family: aroosa;
+		font-size: 2rem;
+		color: black;
+		width: 60%;
+		margin: auto;
+		margin-top: 100px;
+		margin-bottom: 0px;
+		font-weight: 200;
+		border-radius: 40px;
+		height: 60px;
+	}
+
+	::-webkit-input-placeholder {
+		margin: 20px;
+		width: 80%;
+		height: 60px;
+		font-size: 1.5rem;
+		background-color: #F2E40A;
+		color: black;
+		font-family: aroosa;
+	}
+	input {
+		margin: 20px;
+		width: 80%;
+		height: 60px;
+		font-size: 1.5rem;
+		background-color: #F2E40A;
+		color: black;
+		border-style: none;
+		border: 3px solid black;
+		font-weight: 500;
+		outline: none;
+	}
+
+	a {
+		color: black;
+		font-size: 2rem;
+		font-family: aroosa;
+		font-weight: 200;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+		font-size: 2rem;
+		font-family: aroosa;
+		font-weight: 200;
+		text-decoration: underline;
+	}
+
+	input[type=password] {
+		font-family: 'aroosa';
+}
+
+</style>
+<body>
+
+	<div id="main">
+		<p>أجود أنواع الإي كوميرس</p>
+		<h1 id="title">ماركت الصفوة</h1>
+
+		<input type="text" id="username" placeholder="اليوزرنيم">
+		<br>
+		<input type="password" id="password" placeholder="الباسورد">
+		<br>
+		<a href="signup.html">معندكش أكاونت؟</a>
+
+	</div>
+
+<!-- <script src="login.js"></script> -->
+
+	<script type="module">
+        import * as cookieHelpers from "../helpers/main.js";
+
+        var loginHandler = document.getElementById("username").addEventListener("input", function() {
+            handleLogin();
+        });
+
+        var loginHandler = document.getElementById("password").addEventListener("input", function() {
+            handleLogin();
+        });
+
+        function handleLogin() {
+
+            // var storedUsername = cookieHelpers.getCookie('username').split('=')[1];
+            // var storedPassword = cookieHelpers.getCookie('password').split('=')[1];
+
+            var storedUsername = localStorage.getItem("username");
+            var storedPassword = localStorage.getItem("password");
+
+
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+
+            if(username.value == storedUsername && password.value == storedPassword) {
+                username.value = ""
+                password.value = ""
+                alert(`Hi, ${username.value}, Logged in successfully`)
+                window.open("main.html", "_self");
+            }
+
+        }
+	</script>
+
+</body>
+</html>
+

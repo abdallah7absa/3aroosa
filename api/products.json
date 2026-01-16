@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "title": "El Motalaqa Tea",
+    "price": 25,
+    "description": "a7zan anwa3 elshai shai elmotalaqa",
+    "category": "hot",
+    "image": "../assets/images/products/1.png",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Abo El Arosa Tea",
+    "price": 120,
+    "description": "agwad anwa3 elshai shai abo el3aroosa",
+    "category": "hot",
+    "image": "../assets/images/products/2.png",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Om El Arosa Tea",
+    "price": 360,
+    "description": "atyab anwa3 elshai shai om el3aroosa",
+    "category": "hot",
+    "image": "../assets/images/products/3.png",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "El Arees Tea",
+    "price": 120,
+    "description": "af5am anwa3 elshai shai el 3arees",
+    "category": "hot",
+    "image": "../assets/images/products/4.png",
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "El Arosa Tea",
+    "price": 25,
+    "description": "agwad anwa3 elshai shai abo el3aroosa",
+    "category": "hot",
+    "image": "../assets/images/products/5.png",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "El Arosa El LEGO Tea",
+    "price": 120,
+    "description": "amta3 anwa3 elshai shai el3aroosa ellego",
+    "category": "hot",
+    "image": "../assets/images/products/6.png",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "title": "El Ghareeba Tea",
+    "price": 120,
+    "description": "aghrab anwa3 elshai shai ghareeba",
+    "category": "hot",
+    "image": "../assets/images/products/7.png",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "El Habarah Tea",
+    "price": 120,
+    "description": "ar3ab anwa3 elshai shai elhabarah",
+    "category": "hot",
+    "image": "../assets/images/products/8.png",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "El Sadaka Tea",
+    "price": 120,
+    "description": "asdaq anwa3 elshai shai elsadaka",
+    "category": "hot",
+    "image": "../assets/images/products/9.png",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "El Nezuku Chan Tea",
+    "price": 120,
+    "description": "akiat anwa3 elshai shai el nezuku chan",
+    "category": "hot",
+    "image": "../assets/images/products/10.png",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "El Arosa Fulla Tea",
+    "price": 120,
+    "description": "asghar anwa3 elshai shai el3aroosa elle3ba",
+    "category": "hot",
+    "image": "../assets/images/products/11.png",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "Abo El Arosa Tea Vintage",
+    "price": 240,
+    "description": "a2dam anwa3 elshai shai abo el3aroosa",
+    "category": "hot",
+    "image": "../assets/images/products/12.png",
+    "featured": false
+  },
+  {
+    "id": 13,
+    "title": "v7 Teen Shouki",
+    "price": 20,
+    "description": "v7 bta3m el teen shouki 7elw awe fel seif",
+    "category": "cold",
+    "image": "../assets/images/products/13.png",
+    "featured": false
+  },
+  {
+    "id": 14,
+    "title": "v7 Shai El Arosa",
+    "price": 20,
+    "description": "v7 bta3m shai el 3aroosa 7elw awe fe kol wa2t",
+    "category": "cold",
+    "image": "../assets/images/products/14.png",
+    "featured": true
+  },
+  {
+    "id": 15,
+    "title": "v7 Shorbt Kware3",
+    "price": 20,
+    "description": "v7 bta3m shorbet el 3aware3 7elw awe fel sheta",
+    "category": "cold",
+    "image": "../assets/images/products/15.png",
+    "featured": false
+  },
+  {
+    "id": 16,
+    "title": "v7 Tofa7 A7mar",
+    "price": 20,
+    "description": "v7 bta3m el tofa7 el a7mar 7elw awe bleel",
+    "category": "cold",
+    "image": "../assets/images/products/16.png",
+    "featured": false
+  },
+  {
+    "id": 17,
+    "title": "Laser",
+    "price": 25,
+    "description": "le3ba 73lwa llatfal we llkobar kman, 3arraye2 awe ya3ni",
+    "category": "toy",
+    "image": "../assets/images/products/17.png",
+    "featured": false
+  },
+  {
+    "id": 18,
+    "title": "Battery",
+    "price": 3,
+    "description": "3shan ellaiser law b2a da3eef tghayar el batareia",
+    "category": "toy",
+    "image": "../assets/images/products/18.png",
+    "featured": false
+  },
+  {
+    "id": 19,
+    "title": "Atari",
+    "price": 45,
+    "description": "blue atari with more than 1000 game",
+    "category": "toy",
+    "image": "../assets/images/products/19.png",
+    "featured": false
+  },
+  {
+    "id": 20,
+    "title": "Atari El 3aroosa",
+    "price": 45,
+    "description": "red atari with more than 1000 game",
+    "category": "toy",
+    "image": "../assets/images/products/20.png",
+    "featured": false
+  },
+  {
+    "id": 21,
+    "title": "Black Atari",
+    "price": 45,
+    "description": "black atari with more than 1000 game",
+    "category": "toy",
+    "image": "../assets/images/products/21.png",
+    "featured": false
+  },
+  {
+    "id": 22,
+    "title": "Yellow Atari",
+    "price": 45,
+    "description": "yellow atari with more than 1000 game",
+    "category": "toy",
+    "image": "../assets/images/products/22.png",
+    "featured": false
+  },
+  {
+    "id": 23,
+    "title": "Ta7ya Misr Atari",
+    "price": 45,
+    "description": "egyptian atari with more than 1000 game",
+    "category": "toy",
+    "image": "../assets/images/products/23.png",
+    "featured": true
+  }
+]

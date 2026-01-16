@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../assets/images/icon.png">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<title>بوتستراب العروسة</title>
+		<style>
+			@font-face {
+			    font-family: aroosa;
+			    src: url(../assets/fonts/3aroosa_font.ttf);
+			}
+
+			body {
+			    background-color: #F2E40A;
+			    overflow-x: hidden;
+			    position: relative;
+			}
+
+			.nav {
+				background-color: #F2E40A;
+				border-bottom: 3px solid #000;
+				width: 100%;
+			}
+
+			.header {
+				 /*background-image: url("assets/images/bg.png");*/
+			    background-color: #EE0A17;
+			    height: 440px;
+			    filter: drop-shadow(rgba(0, 0, 0, 1) 2px 2px 2px);
+				.title, .phone, a {
+				    font-family: aroosa;
+				    color: #000;
+				}
+			}
+
+			.header__ul {
+			    height: 100%;
+			    margin: auto;
+			}
+
+			.header__logo {
+			    width: 70px;
+			}
+
+			.nav-btn {
+				border: 3px solid #000 !important;
+				border-radius: 0px !important;
+				outline: none !important;
+				box-shadow: none !important;
+			}
+
+			h1, h2 {
+				font-family: aroosa;
+				color: black;
+				font-size: 5vw;
+			}
+
+			h3 {
+				font-family: aroosa;
+				color: black;
+				font-size: 3vw;
+			}
+
+			p, .arees__title, .motalaqa__title {
+				background-color: #F2E40A;
+				font-family: aroosa;
+				font-size: 3vw;
+				color: black;
+				width: 40%;
+				margin: auto;
+				margin-top: 80px;
+				margin-bottom: 10px;
+				border-radius: 4vw;
+				height: 5vw;
+			}
+			.aroosa-le3ba__title {
+				background-color: #F11EA8;
+				font-family: aroosa;
+				font-size: 3vw;
+				color: white;
+				width: 25vw;
+				margin: auto;
+				margin-top: 80px;
+				margin-bottom: 10px;
+			border-radius: 4vw;
+				height: 5vw;
+			}
+			.stranger__title {
+				font-family: aroosa;
+				font-size: 3vw;
+				color: red;
+				width: 25vw;
+				margin: auto;
+				margin-top: 80px;
+				margin-bottom: 10px;
+				border-radius: 4vw;
+				height: 5vw;
+			}
+			.hero__image {
+				width: 35%;
+			}
+
+			::-webkit-scrollbar {
+			  width: 20px;
+			}
+
+			::-webkit-scrollbar-track {
+			  box-shadow: inset 0 0 5px grey;
+			  border: 3px solid rgba(0, 0, 0, 0.8);
+			  border-width: 0px 3px 0px 3px;
+			  border-radius: 0px;
+			  background-color: black;
+			}
+
+			::-webkit-scrollbar-thumb {
+			  background: #F2E40A;
+			  border: 3px solid rgba(0, 0, 0, 0.8);
+			  border-width: 0px 3px 0px 3px;
+			  border-radius: 0px;
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+			  background: #b30000; 
+			}
+
+			.marry {
+				width: 80%;
+				font-size: 3rem;
+				background-color: #F2E40A;
+				color: black;
+				border-style: none;
+				border: 3px solid black;
+				font-weight: 500;
+				margin: 60px;
+				padding: 30px;
+				font-family: aroosa;
+				&:hover {
+					background-color: #D1C206;
+				}
+				&:active {
+					background-color: #E0E104;
+				}
+			}
+			.guess-button {
+				background-color: #AAA007;
+				color: black;
+				border-style: none;
+				font-weight: 600;
+				border: 3px solid black;
+				font-family: aroosa;
+				&:hover {
+					background-color: #D1C206;
+				}
+				&:active {
+					background-color: #E0E104;
+				}
+			}
+			input {
+				/*font-family: aroosa;*/
+				margin: 20px;
+				width: 80%;
+				height: 60px;
+				font-size: 1.5rem;
+				background-color: #AAA007;
+				color: black;
+				border-style: none;
+				border: 3px solid black;
+				font-weight: 500;
+				outline: none;
+			}	
+			::-webkit-input-placeholder {
+				margin: 20px;
+				width: 80%;
+				height: 60px;
+				font-size: 1.5rem;
+				color: black;
+				font-family: aroosa;
+			}
+
+			.family__link {
+				color: #EE0A17;
+			}
+
+			.arees {
+				background-color: #EE0A17;
+			}
+			.stranger {
+				background-image: url("assets/images/stranger-bg.png");
+				  background-position: center;
+				  background-repeat: no-repeat;
+				  background-size: cover;
+			}
+			.lego {
+				background-color: #E40104;
+			}
+			.aroosa-le3ba {
+				background-color: #FFC4EA;
+			}
+			.arees__image {
+				justify-self: center;
+				width: 80%;
+			}
+			.motalaqa__image {
+				justify-self: center;
+				width: 80%;
+			}
+			.lego__image {
+				justify-self: center;
+				width: 80%;
+			}
+			.aroosa-le3ba__image {
+				justify-self: center;
+				width: 80%;
+			}
+			.bako-arees__image {
+				width: 80%;
+			}
+			.bako-motalaqa__image {
+				width: 80%;
+			}
+			.bako-lego__image {
+				width: 80%;
+			}
+			.bako-aroosa-le3ba__image {
+				width: 80%;
+			}
+			.bako-stranger__image {
+				width: 80%;
+			}
+			.arees__title, .motalaqa__title {
+				width: 40vh;
+				padding-left: 5vh;
+				padding-top: 3px;
+				padding-right: 5vh;
+			}
+			.motalaqa__title {
+				background-color: #ED121D;
+				padding: 0px;
+				width: 100%;
+			}
+			.lego__title {
+				padding: 5vh;
+				width: 100%;
+			}
+			.lego__subtitle {
+				padding: 5vh;
+			}
+			.aroosa-le3ba__subtitle {
+				color: white;
+			}
+			.aroosa-le3ba-text-image {
+				width: 80%;
+			}
+			.stranger-text-image {
+				width: 80%;
+			}
+			.guess {
+				/*background-color: #837201;*/
+				/*background: linear-gradient(180deg,rgba(131, 114, 1, 1) 0%, rgba(209, 190, 19, 1) 49%, rgba(170, 160, 7, 1) 100%);*/
+				background: linear-gradient(180deg,rgba(131, 114, 1, 1) 0%, rgba(170, 160, 7, 1) 100%);
+			}
+
+		.footer {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+		    width: 100%;
+		    background-color: transparent;
+		    height: 55px;
+		    align-content: center;
+		    text-align: center;
+		}
+		.footer__logo {
+		    width: 55px;
+		    float: left;
+		    display: inline-block;
+		}
+
+		.footer__logout {
+		    height: 30px;
+		    display: inline-block;
+		}
+
+		.footer__cart {
+		    height: 45px;
+		    display: inline-block;
+		}
+
+		.footer__left {
+			font-family: aroosa;
+		    display: inline-block;
+		    color: white;
+		    vertical-align: top;
+		    font-weight: 200;
+		    font-size: 1rem;
+		}
+		.footer__right {
+		    font-weight: 100;
+		    font-size: 1rem;
+			color: white;
+			font-family: aroosa;
+		}
+
+		.hero__left, .hero__right {
+			height: 70%;
+		}
+		.hero {
+			height: 70vh;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div class="header d-flex justify-content-between align-content-start flex-wrap text-center fs-2 vh-100">
+			<nav class="nav navbar navbar-expand-lg py-0 my-0">
+			  <div class="container-fluid">
+			    <button class="nav-btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+			      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+			        <li class="nav-item">
+			          <a class="nav-link header__right p-0 pe-2" href="#">
+			          	<div class="d-flex align-content-start">	
+						<img src="./assets/images/logo1.png" alt="3aroosa" class="header__logo mt-2 me-2 ms-2">
+						<a class="phone align-content-center text-decoration-none fs-2">ماركت الصفوة</a></a>
+			          	</div>
+			        </li>
+			      </ul>
+			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			        <ul class="header__ul d-flex navbar-text mx-auto flex-column flex-lg-row justify-content-center">
+				        <li class="header__li list-group-item me-2 ms-2 align-content-center"><a href="#tree" class="text-decoration-none">شجرة العيلة</a></li>
+				        <li class="header__li list-group-item me-2 ms-2 align-content-center"><a class="text-decoration-none">٠</a></li>
+						<li class="header__li list-group-item me-2 ms-2 align-content-center"><a href="#strange" class="text-decoration-none">سترينجر شاي</a></li>
+				        <li class="header__li list-group-item me-2 ms-2 align-content-center"><a class="text-decoration-none">٠</a></li>
+			            <li class="header__li list-group-item me-2 ms-2 align-content-center"><a href="#v7" class="text-decoration-none">الساقع</a></li>
+			        </ul>
+			      <ul class="navbar-nav mb-2 mb-lg-0">
+			        <li class="nav-item">
+			          <a class="nav-link header__right p-0" href="#">
+			          	<a class="phone align-content-center fs-2" href="https://api.whatsapp.com/send?phone=+201021720711&text=أحلا مسا" target="_blank">+٢٠١٠٢١٧٢٠٧١١</a>
+						<img src="./assets/images/logo2.png" alt="3aroosa" class="header__logo mt-2 me-2 ms-2"></a>
+			        </li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+
+			<p>أجود أنواع التمبلتس</p>
+
+			<div class="hero w-100 d-flex flex-column flex-xl-row justify-content-start align-items-center">
+				<!-- <img class="hero__image" src="assets/images/3aroosa.png"> -->
+				<div class="hero__left w-50 d-flex flex-column justify-content-center align-content-start">
+				<!-- <h2 class="w-100">هوفر مي</h2> -->
+					<canvas class="canvas w-100" id="canvas"></canvas>
+				</div>
+				<div class="hero__right w-50 d-flex flex-column justify-content-center align-content-center">
+					<h2>استيراد وتعبئة شركة الحبسه</h2>
+					<button class="marry align-self-center" id="orderBtn">اطلب اﻵن</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="family w-100" id="tree">
+			<h2 class="family__button w-100 mt-5 text-center">شجرة العيلة</h2>
+			<img class="family__image w-100 p-5" src="assets/images/family.png">
+			<h2 class="family__button w-100 mb-5 text-center">قرايبك كلهم عندنا ٠ <a role="button" class="family__link text-decoration-underline fs-1" href="./src/main.html">رن عليهم</a></h2>
+		</div>
+
+		<div class="arees w-100 d-flex flex-column flex-xl-row justify-content-evenly">
+			<div class="arees__bako w-20 d-flex justify-content-center align-content-center text-center">
+				<img class="bako-arees__image" src="assets/images/bako-arees.png">
+			</div>
+			<div class="arees__content w-80 d-flex justify-content-center align-content-center text-center">
+				<div class="arees__content-image w-20 align-content-center">
+					<img class="arees__image p-5" src="assets/images/arees.png">
+				</div>
+				<div class="arees__content-text w-60 align-content-center">
+					<h1 class="arees__title w-100 mt-5 text-center">أفخم أنواع الشاي</h1>
+					<h1 class="arees__subtitle w-100 mt-5 text-center">شاي العريس</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="motalaqa w-100 d-flex flex-column flex-xl-row justify-content-evenly">
+			<div class="motalaqa__content w-80 d-flex justify-content-center align-content-center text-center">
+				<div class="motalaqa__content-image w-20 align-content-center">
+					<img class="motalaqa__image p-5" src="assets/images/motalaqa.png">
+				</div>
+				<div class="motalaqa__content-text w-60 align-content-center">
+					<h1 class="motalaqa__title mt-5 text-center">أحزن أنواع الشاي</h1>
+					<!-- <h1 class="motalaqa__subtitle w-100 mt-5 text-center">شاي العروسة اللعبة</h1> -->
+					<h1 class="motalaqa__subtitle mt-5 text-center">شاي المطلقة</h1>
+				</div>
+			</div>
+			<div class="motalaqa__bako w-20 d-flex justify-content-center align-content-center text-center">
+				<img class="bako-motalaqa__image" src="assets/images/bako-motalaqa.png">
+			</div>
+		</div>
+
+		<div class="lego w-100 d-flex flex-column flex-xl-row justify-content-evenly">
+			<div class="lego__bako w-20 d-flex justify-content-center align-content-center text-center">
+				<img class="bako-lego__image" src="assets/images/bako-lego.png">
+			</div>
+			<div class="lego__content w-80 d-flex justify-content-center align-content-center text-center">
+				<div class="lego__content-image w-30 align-content-center">
+					<img class="lego__image p-5" src="assets/images/lego.png">
+				</div>
+				<div class="w-50 d-flex flex-column justify-content-center align-items-center">
+<!-- 					<h1 class="lego__title w-100 mt-5 text-center">أمتع أنواع الشاي</h1>
+					<h1 class="lego__subtitle w-100 mt-5 text-center">شاي العريس</h1> -->
+					<img class="lego__title w-100 mb-0 text-center" src="assets/images/lego-title.png">
+					<img class="lego__subtitle w-100 mt-0 text-center" src="assets/images/lego-subtitle.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="aroosa-le3ba w-100 d-flex flex-column flex-xl-row justify-content-evenly">
+			<div class="aroosa-le3ba__content w-80 d-flex justify-content-center align-content-center text-center">
+				<div class="aroosa-le3ba__content-image w-20 align-content-center">
+					<img class="aroosa-le3ba__image p-5" src="assets/images/aroosa-le3ba.png">
+				</div>
+				<div class="aroosa-le3ba__content-text w-60 align-content-center">
+					<h1 class="aroosa-le3ba__title mt-5 text-center">أكيت أنواع الشاي</h1>
+					<!-- <h1 class="aroosa-le3ba__subtitle w-100 mt-5 text-center">شاي العروسة اللعبة</h1> -->
+					<img class="aroosa-le3ba-text-image m-4 p-4" src="assets/images/aroosa-le3ba-text.png">
+				</div>
+			</div>
+			<div class="aroosa-le3ba__bako w-20 d-flex justify-content-center align-content-center text-center">
+				<img class="bako-aroosa-le3ba__image" src="assets/images/bako-aroosa-le3ba.png">
+			</div>
+		</div>
+
+		<div class="stranger w-100 d-flex flex-column flex-xl-row justify-content-evenly" id="strange">
+			<div class="stranger__bako w-20 d-flex justify-content-center align-content-center text-center">
+				<img class="bako-stranger__image" src="assets/images/bako-stranger.png">
+			</div>
+			<div class="stranger__content w-80 d-flex justify-content-center align-content-center text-center">
+				<div class="stranger__content-image w-20 align-content-center">
+					<img class="stranger__image p-0" src="assets/images/stranger.png">
+				</div>
+				<div class="stranger__content-text w-60 align-content-center">
+					<h1 class="stranger__title mt-5 text-center">أغرب أنواع الشاي</h1>
+					<!-- <h1 class="stranger__subtitle w-100 mt-5 text-center">شاي العروسة اللعبة</h1> -->
+					<img class="stranger-text-image m-0 p-0" src="assets/images/stranger-text.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="cold w-100" id="v7">
+			<img class="cold__image w-100" src="assets/images/cold.png">
+		</div>
+
+<!-- 	
+		<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active" data-bs-interval="2000">
+		      <img src="assets/images/carousel-1.png" class="d-block w-100" alt="...">
+		    </div>
+		    <div class="carousel-item" data-bs-interval="2000">
+		      <img src="assets/images/carousel-2.png" class="d-block w-100" alt="...">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="assets/images/carousel-3.png" class="d-block w-100" alt="...">
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+ -->
+
+ 		<div class="guess w-100 d-flex flex-column">
+ 			<h3 class="w-100 p-5 text-center">شركة الحبسه عملت ١٠ أنواع شاي جديدة</h3>
+	 		<div class="container text-center w-100">
+			  <div class="row row-cols-auto">
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			    <div class="col"><img src="assets/images/grid.png"></div>
+			  </div>
+			</div>
+ 			<h3 class="w-100 p-5 text-center">!! تتوقعوا ايه هما</h3>
+ 			<div class="w-100 d-flex flex-row">
+ 				<input id="guessInput" class="guess-input w-100 mt-5 mb-5 me-2 ms-5 p-2" type="text" name="guess" placeholder="اكتب هنا">
+ 				<button id="guessBtn" class="guess-button w-20 mt-5 mb-5 ms-2 me-5 ps-2 pe-2 pb-2 fs-4">سبمت</button>
+ 			</div>
+ 		</div>
+
+		<div class="above-footer w-100">
+			<img class="above-footer__image w-100" src="assets/images/footer.png">
+		</div>
+
+	    <div class="footer d-flex w-100 justify-content-between align-items-center">
+	    	<div class="footer__left ms-2 d-flex align-items-center">
+		        <img src="assets/images/logo.png" alt="logo" class="footer__logo">
+		       	<span>&copy; عبدالله حبسه + ياسر توفيق + السيد معوض + إياد عماد + عمر عادل - كل الحقوق منسية</span>
+			</div>
+			<a class="footer__right me-2" href="./src/main.html">ماركت الصفوة</a>
+	    </div>
+
+		<script type="importmap">
+		{
+		  "imports": {
+		    "three": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js",
+		    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/"
+		  }
+		}
+		</script>
+
+    <script type="module">
+		import * as THREE from 'three';
+		import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+		orderBtn.addEventListener('click', () => {
+		    window.open('./src/main.html', '_self')
+		})
+
+		guessBtn.addEventListener('click', () => {
+		    guessInput.value = "";
+		    alert("جدع");
+		})
+
+		const canvas = document.getElementById('canvas');
+		const scene = new THREE.Scene();
+		const camera = new THREE.PerspectiveCamera(75, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
+		const renderer = new THREE.WebGLRenderer({ 
+		    canvas: canvas, 
+		    antialias: true, 
+		    alpha: true 
+		});
+
+		renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+		renderer.setClearColor(0x000000, 0);
+		renderer.outputEncoding = THREE.sRGBEncoding;
+		renderer.toneMapping = THREE.ACESFilmicToneMapping;
+		renderer.toneMappingExposure = 1.2;
+		renderer.shadowMap.enabled = false;
+		renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+		const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+		scene.add(ambientLight);
+
+		const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+		directionalLight.position.set(5, 5, 5);
+		directionalLight.castShadow = true;
+		scene.add(directionalLight);
+
+		const pointLight = new THREE.PointLight(0xffffff, 0.6);
+		pointLight.position.set(-5, 5, 5);
+		scene.add(pointLight);
+
+		const backLight = new THREE.DirectionalLight(0xffffff, 0.5);
+		backLight.position.set(-5, -5, -5);
+		scene.add(backLight);
+
+		camera.position.z = 5;
+
+		let model;
+		let mouseX = 0;
+		let mouseY = 0;
+		let targetRotationX = 0;
+		let targetRotationY = 0;
+
+		function getModelPath() {
+		    return window.innerWidth <= 1000 
+		        ? 'assets/models/bako-soghayar.glb' 
+		        : 'assets/models/bako-kbeer.glb';
+		}
+
+		function loadModel() {
+		    const loader = new GLTFLoader();
+		    const modelPath = getModelPath();
+		    
+		    loader.load(
+		        modelPath,
+		        function(gltf) {
+		            if (model) {
+		                scene.remove(model);
+		            }
+		            
+		            model = gltf.scene;
+		            model.traverse((child) => {
+		                if (child.isMesh) {
+		                    if (child.material.map) {
+		                        child.material.map.encoding = THREE.sRGBEncoding;
+		                        child.material.map.anisotropy = renderer.capabilities.getMaxAnisotropy();
+		                        child.material.map.minFilter = THREE.LinearMipmapLinearFilter;
+		                        child.material.map.magFilter = THREE.LinearFilter;
+		                    }
+		                    child.material.needsUpdate = true;
+		                    child.castShadow = true;
+		                    child.receiveShadow = true;
+		                }
+		            });
+
+		            const box = new THREE.Box3().setFromObject(model);
+		            const center = box.getCenter(new THREE.Vector3());
+		            const size = box.getSize(new THREE.Vector3());
+		            const maxDim = Math.max(size.x, size.y, size.z);
+		            let scale = 4.6 / maxDim;
+		            
+		            if (window.innerWidth <= 1000) {
+		                scale *= 0.5;
+		            }
+		            
+		            model.scale.multiplyScalar(scale);
+		            model.position.sub(center.multiplyScalar(scale));
+		            
+		            scene.add(model);
+		        },
+		        function(xhr) {
+		            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+		        },
+		        function(error) {
+		            console.error('Error loading model:', error);
+		        }
+		    );
+		}
+
+		loadModel();
+
+		window.onmousemove = function(e) {
+		    const rect = canvas.getBoundingClientRect();
+		    mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+		    mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+		}
+
+		canvas.addEventListener('mouseleave', () => {
+		    mouseX = 0;
+		    mouseY = 0;
+		});
+
+		function animate() {
+		    requestAnimationFrame(animate);
+		    
+		    if (model) {
+		        model.rotation.y = 0
+		        targetRotationY = mouseX * 0.3;
+		        targetRotationX = mouseY * 0.2;
+		        
+		        model.rotation.y += (targetRotationY - model.rotation.y) * 0.05;
+		        model.rotation.x += (targetRotationX - model.rotation.x) * 0.05;
+		    }
+		    
+		    renderer.render(scene, camera);
+		}
+
+		animate();
+
+		let previousWidth = window.innerWidth;
+
+		window.addEventListener('resize', () => {
+		    const width = canvas.offsetWidth;
+		    const height = canvas.offsetHeight;
+		    
+		    camera.aspect = width / height;
+		    camera.updateProjectionMatrix();
+		    
+		    renderer.setSize(width, height);
+		    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+		    
+		    const currentWidth = window.innerWidth;
+		    if ((previousWidth <= 1000 && currentWidth > 1000) || 
+		        (previousWidth > 1000 && currentWidth <= 1000)) {
+		        loadModel();
+		    }
+		    previousWidth = currentWidth;
+		});
+    </script>
+   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	</body>
+</html>
